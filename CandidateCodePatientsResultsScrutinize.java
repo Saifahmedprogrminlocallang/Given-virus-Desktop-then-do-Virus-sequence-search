@@ -115,6 +115,8 @@ char txnzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSe
 int tinzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt= 0;
 int tnitxnzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt= 1;
 
+int PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceboolcoronavirus;
+PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceboolcoronavirus=0;
 
 for (klm=0;klm<nzpatientnumber;klm++) {
 
@@ -199,15 +201,23 @@ tnitxnzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequ
 
 int njpbkh=z;
 
-strzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt= Character.toString(PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence.charAt(njpbkh)) ;
+strzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt= Character.toString(Virusunderscrutiny.charAt(njpbkh)) ;
 strtxnzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt= Character.toString(PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence.charAt(njpbkh+1));
 
+int intinzakacompare =0;
+String str1="";
+str1=strzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt.trim();
+String str2="";
+str2=strtxnzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt.trim();
+intinzakacompare=str1.compareTo(str2);
 
-   if (strzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt.trim()!=strtxnzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt.trim()){
+   if (intinzakacompare<0){
    //set ascending order flag  PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencebool=0;
    PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencebool=0;     
+   PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceboolcoronavirus=0;
    } else {
-   PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencebool=1;     
+   PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencebool=1;
+   PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceboolcoronavirus=1;     
 }
 }
 
@@ -216,15 +226,21 @@ int lycydsknjgtrck=nzpatientnumber;
 int PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResult[];
 PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResult = new int[lycydsknjgtrck];
 int ijknz=0;
+int PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResultcoronavirus[];
+PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResultcoronavirus=new int[lycydsknjgtrck];
+
+
 
 while (ijknz<nzpatientnumber){
-if (PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencebool==0) {
+if (PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencebool==0 || PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceboolcoronavirus==0) {
 PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResult[ijknz]= 0;
+PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResultcoronavirus[ijknz]= 0;
 } else {
 PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResult[ijknz]= 1;
+PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResultcoronavirus[ijknz]= 1;
 }
 
-if(PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResult[ijknz]==0) {
+if(PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResult[ijknz]==0 || PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResultcoronavirus[ijknz]==0) {
    System.out.println("Result - "+PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResult[ijknz]+" - success ...- not corona positive");
 } else {
    System.out.println("Result - "+PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequenceFlagSetResult[ijknz]+" - failure ...- corona positive");
