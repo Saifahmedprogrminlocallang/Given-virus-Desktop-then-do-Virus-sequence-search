@@ -83,7 +83,7 @@ String nzpatientnumberstring="0";
 
 try {
 nzpatientnumberstring = args2[1];
-nzpatientnumber= arg2lensi; //Integer.parseInt(nzpatientnumberstring);
+nzpatientnumber= arg2lensi;
 } catch(NumberFormatException ZKTDTKNFEbNFEiznkioe) {
 ZKTDTKNFEbNFEiznkioe.getStackTrace();
 } catch (Exception e) {
@@ -127,7 +127,7 @@ String PatientBloodSequenceofPatienttobeinvestigatedSequence=BloodSequenceofpati
 int z=0;
 
 int knz;
-knz=PatientBloodSequenceofPatienttobeinvestigatedSequence.length();
+knz=Virusunderscrutiny.length();
 
 //int PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence[];
 // PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence= new int[knz];
@@ -152,21 +152,27 @@ Stringindexofbloodcompositionsequencestringinviruscompositionstring = Virusunder
 
 bkh=Character.toString(Virusunderscrutiny.charAt(Stringindexofbloodcompositionsequencestringinviruscompositionstring));
 
-if (PatientBloodSequenceofPatienttobestringtobesearched ==  bkh){ 
+if ((z<PatientBloodSequenceofPatienttobeinvestigatedSequence.length()) || (z<Virusunderscrutiny.length())){
+if (PatientBloodSequenceofPatienttobestringtobesearched!=bkh){ 
 z++;
 }
 else {
 System.out.println("sequence not matched");
 }
 }
+
+
+}
+
 int nkz=0;
 
 
 PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence="";
 
-String currentbloodsequenceintrialscrutiny=BloodSequenceofpatients[zkn];
+String strczcurrentbloodsequenceintrialscrutiny="";
+strczcurrentbloodsequenceintrialscrutiny=BloodSequenceofpatients[klm];
 
-PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence=currentbloodsequenceintrialscrutiny;
+PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence=strczcurrentbloodsequenceintrialscrutiny;
 
 //char zlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt= PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence.charAt(PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence.indexOf[nkz]);
 //char txnzlknvariablePatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequencecharAt= PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence.charAt(PatientBloodSequenceofPatienttobeinvestigatedSetFlagfortheSequence.indexOf[nkz+1]);
