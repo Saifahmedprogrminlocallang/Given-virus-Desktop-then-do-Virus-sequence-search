@@ -23,7 +23,7 @@ public class CandidateCodePatientsResultsScrutinize {
 	      int zkj;
 	      zkj=0;
 		  
-/**	      try {
+	      try {
 
 			  BufferedReader br_inputlanglkfile = new BufferedReader(new FileReader(InputLangKeywordFilename ));
 					  
@@ -53,7 +53,7 @@ public class CandidateCodePatientsResultsScrutinize {
 				e.getStackTrace();   
 			   } 		
 
-**/
+
 
 String BloodCompositionofpatients[]=new String[10];
 
@@ -153,8 +153,14 @@ Stringindexofbloodcompositionsequencestringinviruscompositionstring = Virusunder
 bkh=Character.toString(Virusunderscrutiny.charAt(Stringindexofbloodcompositionsequencestringinviruscompositionstring));
 
 if ((z<PatientBloodSequenceofPatienttobeinvestigatedSequence.length()) || (z<Virusunderscrutiny.length())){
-if (PatientBloodSequenceofPatienttobestringtobesearched!=bkh){ 
+
+int tinzakacompare =0;
+tinzakacompare=PatientBloodSequenceofPatienttobestringtobesearched.compareTo(bkh);
+
+
+if (PatientBloodSequenceofPatienttobestringtobesearched!=bkh) { 
 z++;
+System.out.println("sequence matched");
 }
 else {
 System.out.println("sequence not matched");
